@@ -1,13 +1,42 @@
 ---
-description: Persist chats and plans into the repo so they survive on GitHub
+description: Persist chats and Cursor plans into the repo so a clone of HEAD can continue
 alwaysApply: true
 ---
 
 # Persist chats and plans
 
-Cursor chat history is not in git. Anything we want kept must be a file in this repo.
+Cursor chats, transcripts, and plans under `~/.cursor` are **not** in git.
+A `git clone` of the last pushed commit on another PC must be enough to
+continue this work. Anything we want kept must be a file in this repo.
 
-- After a substantial design or planning conversation, write or update `notes/chats/YYYY-MM-DD-short-slug.md` with decisions and rationale (not tool traces).
-- Put standing plans in `notes/plans/`. Working lists and images go in `sources/`.
-- When the user says to save the chat, or asks that notes be on GitHub, write the file and then commit and push if they also want it on the remote.
-- Do not rely on agent-transcripts or the chat UI as the archive.
+## On “save the chat” (also when the user asks to commit and push notes)
+
+Do all of these, in order:
+
+1. Write or append `notes/chats/YYYY-MM-DD-short-slug.md` (decisions and
+   rationale, not tool traces).
+2. Scan `~/.cursor/plans/` and the workspace `.cursor/plans/` for
+   **this project’s** `.plan.md` files, including drafts and superseded
+   versions. Copy new or changed files into `notes/plans/cursor/` using
+   the original `slug_hash.plan.md` filename so later saves overwrite
+   the same id.
+3. Update standing plans under `notes/plans/` if the session changed them.
+4. Commit and **push**. Clone-of-HEAD is the bar.
+
+## Which plans belong here
+
+Only flt-compression. Match by content (`flt-compression`,
+`vendor/fermats-last-theorem`, `unification-opportunities`, `FinalCheck`)
+or by being created in this workspace. Do **not** copy the rest of
+`~/.cursor/plans/` (other repos on this machine).
+
+## Layout
+
+- `notes/chats/` — session write-ups
+- `notes/plans/` — standing plans you step through
+- `notes/plans/cursor/` — verbatim Cursor plans
+- `sources/` — working lists and images
+
+Do not rely on agent-transcripts or the chat UI as the archive.
+A clone will not have Lean/`lake` caches or Cursor UI transcripts;
+those can be rebuilt. Planning state cannot.
