@@ -1,0 +1,8 @@
+# Frozen checkouts vendored for this repository.
+# Copied 2026-09-08 (UTC). No .git / .lake directories.
+
+vendor/fermats-last-theorem
+  origin: https://github.com/anthropics/fermats-last-theorem
+  rev:    aa2d8b34692b16c70f699536de0d8e75b9a3e9ef
+  from:   /home/catskills/Desktop/fermats-last-theorem
+  date:   2026-09-08
