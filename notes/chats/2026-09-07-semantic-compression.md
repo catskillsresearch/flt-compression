@@ -1,8 +1,9 @@
 # Chat: vendoring FLT and semantic compression
 
-- **When:** 2026-09-07 evening – 2026-09-08 early morning (America/New_York)
+- **When:** 2026-09-07 23:38 – 2026-09-08 05:18 (America/New_York)
+- **Saved:** 2026-09-08 05:18 (this file)
 - **Cursor transcript (local only):** `~/.cursor/projects/home-catskills-Desktop-flt-compression/agent-transcripts/4fbf2d78-bd6e-414a-9c7b-6eeb2a4b8263`
-- **Related artifacts:** `vendor/`, `vendor/FROZEN.txt`, `sources/proof_visualization.png`, `sources/unification-opportunities.md`
+- **Related artifacts:** `vendor/`, `vendor/FROZEN.txt`, `sources/proof_visualization.png`, `sources/unification-opportunities.md`, `notes/README.md`, `.cursor/rules/preserve-project-notes.mdc`
 
 ## What we did
 
@@ -59,6 +60,14 @@ See `sources/unification-opportunities.md`. Morning order:
 
 Do not smash Fake-elliptic / X1(p) / DR into one type, or merge landmark theorems.
 
-## How to keep chats on GitHub
+## How to keep chats on GitHub (implemented)
 
-Write them under `notes/` and push. Cursor will not do that by itself. See `notes/README.md`.
+Cursor chats are local only. This repo now keeps them as files:
+
+- `notes/README.md` — convention
+- `notes/chats/` — session write-ups
+- `notes/plans/` — standing plans
+- `.cursor/rules/preserve-project-notes.mdc` — agent reminder
+- First notes commit: `0e32d60a`
+
+Say “save the chat” after a useful session; the agent writes under `notes/` and pushes if the remote should get it. This file is that save.
