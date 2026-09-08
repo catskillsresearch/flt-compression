@@ -5,7 +5,8 @@ Standing walkthrough for residue unification. Raw counts stay in
 Cursor draft: [`cursor/unification_roadmap_d3e19f46.plan.md`](cursor/unification_roadmap_d3e19f46.plan.md).
 
 Vendor pin `aa2d8b34` in [`vendor/FROZEN.txt`](../../vendor/FROZEN.txt) is
-read-only. Lean edits belong in a working tree decided in S0.
+read-only. The working tree is [`factored/`](../../factored/) — the
+`FinalCheck` import closure only (see [`vendor/FACTORED.txt`](../../vendor/FACTORED.txt)).
 
 This file is the plan you step through. It does not itself delete theorems
 or rebuild FLT.
@@ -15,7 +16,7 @@ or rebuild FLT.
 Every step uses the same fields:
 
 - **Goal** — one outcome
-- **Open** — paths under `vendor/fermats-last-theorem`
+- **Open** — paths under `factored/` (vendor is the frozen reference)
 - **Do** — the work
 - **Done when** — a check or a file you can commit
 - **Stop if** — hypotheses differ in a paper-shaped way
@@ -61,18 +62,17 @@ flowchart TD
 
 ---
 
-## S0 — Setup (no Lean edits)
+## S0 — Setup (done: working tree is `factored/`)
 
 - **Goal.** A live-set list and a working-tree decision.
-- **Open.** [`FinalCheck.lean`](../../vendor/fermats-last-theorem/FinalCheck.lean)
+- **Open.** [`factored/FinalCheck.lean`](../../factored/FinalCheck.lean)
   (`import Theorems.Thm_fermat_last_theorem`).
-- **Do.** Keep vendor read-only. Put scripts in `scripts/`. Copy or overlay
-  only when a later step starts editing. Write an import-walker from
-  `FinalCheck`. Record baseline counts (29,511 theorems, 1,450 `Def_` modules).
-- **Done when.** Every `Thm_` / `Def_` / `P2M/Sol` file in the import
-  closure is listed, and a short “how we measure” note exists in this
-  file or `sources/`.
-- **Do not.** Edit vendor. Rebuild the 1.6 GB tree on day one.
+- **Do.** Keep vendor read-only. Edit `factored/` only. The live set *is*
+  the import closure of `FinalCheck`: 60,475 Lean files (1,450 `Def_`,
+  29,511 `Thm_`, 29,513 `P2M`). Html docs, `tools/`, and `.lake/` were
+  not copied. Record: [`vendor/FACTORED.txt`](../../vendor/FACTORED.txt).
+- **Done when.** `factored/` exists in git and is the tree later steps edit.
+- **Do not.** Edit vendor. Copy `html/` or `.lake/`.
 
 ## S0a — Delete the 22 theorems outside the citation closure
 

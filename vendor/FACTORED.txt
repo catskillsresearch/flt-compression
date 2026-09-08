@@ -1,0 +1,16 @@
+# Working copy of the FLT Lake proofcheck tree.
+
+factored/
+  source: vendor/fermats-last-theorem (pin aa2d8b34; see vendor/FROZEN.txt)
+  date:   2026-09-08
+  why:    import closure of FinalCheck.lean — what `lake build` checks
+
+Included (60,475 Lean files, ~1.17 GB sources):
+  FinalCheck.lean, lakefile.lean, lean-toolchain, lake-manifest.json, .gitignore
+  Definitions/ (1,450), Theorems/ (29,511), P2M/ (29,513)
+
+Omitted (not on the Lake proofcheck path):
+  html/, tools/, verification/, .lake/
+
+Edit factored/. Do not edit vendor/fermats-last-theorem.
+A clone does not include .lake; run `lake build` inside factored/ to fetch Mathlib.

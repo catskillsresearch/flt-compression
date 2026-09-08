@@ -1,0 +1,2 @@
+Working copy for FLT compression. Frozen original: ../vendor/fermats-last-theorem
+Only the FinalCheck import closure (Lake proofcheck). See ../vendor/FACTORED.txt
