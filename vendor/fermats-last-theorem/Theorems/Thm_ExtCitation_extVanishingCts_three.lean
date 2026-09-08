@@ -1,5 +1,0 @@
-import Definitions.Def_ExtCitation_AdmissibleExtension_v2
-import P2M.Util
-import P2M.Sol.S_ExtCitation_extVanishingCts_three
-set_option autoImplicit false
-theorem ExtCitation.extVanishingCts_three : ExtCitation.ExtVanishingCts 3 := by p2m_exact_reverting @_root_.P2MW.S_ExtCitation_extVanishingCts_three.solution

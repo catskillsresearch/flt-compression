@@ -1,0 +1,8 @@
+# Lake build cache (Mathlib checkout, .olean files). Never commit.
+.lake/
+
+# Comparator / nanoda work dirs if those scripts are run here.
+.verify-work/
+
+# Elan toolchain cache lives in ~/.elan, not this repo. Ignore a copy if one appears.
+.elan/

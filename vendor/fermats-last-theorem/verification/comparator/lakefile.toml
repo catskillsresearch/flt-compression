@@ -1,8 +1,0 @@
-name = "flt_wrapper"
-defaultTargets = ["Challenge", "Solution"]
-
-[[lean_lib]]
-name = "Challenge"
-
-[[lean_lib]]
-name = "Solution"

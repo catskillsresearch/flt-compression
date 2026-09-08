@@ -6,11 +6,13 @@ factored/
   why:    import closure of FinalCheck.lean — what `lake build` checks
 
 Included (60,475 Lean files, ~1.17 GB sources):
-  FinalCheck.lean, lakefile.lean, lean-toolchain, lake-manifest.json, .gitignore
-  Definitions/ (1,450), Theorems/ (29,511), P2M/ (29,513)
+  FinalCheck.lean, Definitions/ (1,450), Theorems/ (29,511), P2M/ (29,513)
+
+Lake setup is at the repository root (lakefile.lean, lean-toolchain, lake-manifest.json).
+Toolchain: Lean 4.33.1, Mathlib v4.33.0.
 
 Omitted (not on the Lake proofcheck path):
   html/, tools/, verification/, .lake/
 
 Edit factored/. Do not edit vendor/fermats-last-theorem.
-A clone does not include .lake; run `lake build` inside factored/ to fetch Mathlib.
+A clone does not include .lake; run `lake build` at the repository root to fetch Mathlib.

@@ -1,0 +1,4 @@
+[submodule "vendor/fermats-last-theorem"]
+	path = vendor/fermats-last-theorem
+	url = https://github.com/anthropics/fermats-last-theorem.git
+	update = none
