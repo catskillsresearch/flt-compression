@@ -1,0 +1,13 @@
+---
+description: Persist chats and plans into the repo so they survive on GitHub
+alwaysApply: true
+---
+
+# Persist chats and plans
+
+Cursor chat history is not in git. Anything we want kept must be a file in this repo.
+
+- After a substantial design or planning conversation, write or update `notes/chats/YYYY-MM-DD-short-slug.md` with decisions and rationale (not tool traces).
+- Put standing plans in `notes/plans/`. Working lists and images go in `sources/`.
+- When the user says to save the chat, or asks that notes be on GitHub, write the file and then commit and push if they also want it on the remote.
+- Do not rely on agent-transcripts or the chat UI as the archive.
