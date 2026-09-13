@@ -1,5 +1,7 @@
 # Lake build cache (Mathlib checkout, .olean files). Never commit.
+# `.lake/` covers the directory; `.lake` covers a symlink (this repo's cache lives on Elements).
 .lake/
+.lake
 
 # Comparator / nanoda work dirs if those scripts are run here.
 .verify-work/
