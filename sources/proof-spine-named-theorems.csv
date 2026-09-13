@@ -1,0 +1,25 @@
+level,named_theorem,callers,direct_fragment_thm,transitive_fragment_thm,transitive_all_thm
+1,fermat_last_theorem,FinalCheck,0,29149,29488
+2,FLT.fermatLastTheorem,fermat_last_theorem,0,29149,29487
+3,FreyPackage.fermatLastTheoremFor_of_five_le,FLT.fermatLastTheorem,0,29149,29486
+3,fermatLastTheoremThree,FLT.fermatLastTheorem,0,0,0
+4,FreyPackage.no_frey_package,FreyPackage.fermatLastTheoremFor_of_five_le,0,29149,29484
+4,FreyPackage.of_counterexample,FreyPackage.fermatLastTheoremFor_of_five_le,0,0,0
+5,FreyPackage.Wiles_Frey,FreyPackage.no_frey_package,0,0,0
+6,FreyPackage.Mazur_Frey,FreyPackage.Wiles_Frey,0,5429,5435
+6,FreyPackage.frey_isModular,FreyPackage.Wiles_Frey,0,27475,27797
+6,FreyPackage.level_lowering_to_two,FreyPackage.Wiles_Frey,1,27525,27851
+7,FreyPackage.Mazur_Frey_of_a_mod_eight,FreyPackage.Mazur_Frey,1,103,104
+7,FreyPackage.frey_isModular_of_wiles,FreyPackage.frey_isModular,0,0,0
+7,FreyPackage.frey_no_cofixed_eleven,FreyPackage.Mazur_Frey,1,3,3
+7,FreyPackage.frey_no_cofixed_large,FreyPackage.Mazur_Frey,43,5376,5377
+7,FreyPackage.frey_no_cofixed_small,FreyPackage.Mazur_Frey,3,6,6
+7,FreyPackage.frey_reducible_hasCofixedLine,FreyPackage.Mazur_Frey,4,82,82
+7,FreyPackage.level_lowering_to_two_of_conductorLevel,FreyPackage.level_lowering_to_two,1,12944,12980
+8,FreyPackage.level_lowering_at_p_of_conductorLevel,FreyPackage.level_lowering_to_two_of_conductorLevel,4,6063,6090
+8,FreyPackage.level_lowering_odd_prime_of_conductorLevel,FreyPackage.level_lowering_to_two_of_conductorLevel,10,12464,12496
+8,ModularForm.S2_Gamma0_2_eq_zero,FreyPackage.Wiles_Frey; FreyPackage.level_lowering_to_two_of_conductorLevel,0,0,0
+8,ModularForm.S2_Gamma0_one_eq_zero,FreyPackage.level_lowering_to_two_of_conductorLevel,0,0,0
+8,WeierstrassCurve.modularity_of_semistableModel,FreyPackage.frey_isModular_of_wiles,8,27475,27796
+9,WeierstrassCurve.liftingAtConductor_threeFive_of_level_not_sq_dvd,WeierstrassCurve.modularity_of_semistableModel,0,0,0
+9,WeierstrassCurve.liftingAtConductor_three_of_level_hns,WeierstrassCurve.modularity_of_semistableModel,0,0,0
